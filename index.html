@@ -8,10 +8,52 @@
     <title>To-Do List App</title>
 </head>
 <body>
-    <div class="main-container flex flex-col">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-    </div>
+    <!-- Header Section -->
+    <header class="bg-slate-800 text-white">
+        <div class="header-container max-w-5xl mx-auto p-4">
+            <h1 class="text-xl font-semibold">Simple To-Do List App</h1>
+            <p class="text-sm text-slate-300">Manage your tasks efficiently</p>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="min-h-screen bg-slate-100 py-10">
+        <div class="main-container max-w-5xl mx-auto bg-white p-6 rounded-lg shadow">
+            <div class="title-container mb-6">
+                <h2 class="text-2xl font-bold">To Do List</h2>
+            </div>
+            <div class="form-container mb-4">
+                <form id="todoForm" class="flex gap-2">
+                    <input id="taskInput" class="border rounded px-3 py-2 w-full" type="text" placeholder="Enter new to-do item" required>
+                    <input id="dateInput" class="border rounded px-3 py-2" type="date" required>
+                    <button class="bg-blue-600 text-white px-4 rounded">+</button>
+                </form>
+            </div>
+            <div class="filter-delete flex gap-2 mb-4">
+                <button id="filterBtn" class="border px-4 py-2 rounded">Sort by Task Name</button>
+                <button id="deleteAllBtn" class="border px-4 py-2 rounded text-red-600">Delete All</button>
+            </div>
+            <div class="table-container overflow-x-auto">
+                <table class="w-full border-collapse">
+                    <thead class="bg-slate-200">
+                        <tr>
+                            <th class="border p-2">Task</th>
+                            <th class="border p-2">Due Date</th>
+                            <th class="border p-2">Status</th>
+                            <th class="border p-2">Action</th>
+                        </tr>  
+                    </thead>
+                    <tbody id="todoTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer Section -->
+    <footer>
+        <p class="text-sm">© 2025 To-Do List App | Built with HTML, Tailwind & JS</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
